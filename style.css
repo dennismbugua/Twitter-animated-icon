@@ -1,0 +1,140 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  opacity: 0.3;
+  font-size: 1em;
+  padding-top: 4em;
+}
+
+.icon-wrapper {
+  position: absolute;
+  background-color: #1e0035;
+  width: 100px;
+  height: 100px;
+  padding: 40px;
+  line-height: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11), 0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11), 0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
+}
+.icon-wrapper svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.icon-wrapper svg path {
+  position: absolute;
+}
+
+.icon-wrapper:hover #bird-body {
+  animation-name: body-grow;
+  animation-delay: 0.3s;
+}
+.icon-wrapper:hover #upper-beak {
+  animation-name: upper-beak-cherp;
+  animation-delay: 0.2s;
+}
+.icon-wrapper:hover #lower-beak {
+  animation-name: lower-beak-cherp;
+  animation-delay: 0.1s;
+}
+.icon-wrapper:hover #first-wing {
+  animation: f-wing-shake;
+  animation-delay: 0.1s;
+}
+.icon-wrapper:hover #second-wing {
+  animation-name: wing-shake;
+  animation-delay: 0.2s;
+}
+.icon-wrapper:hover #third-wing {
+  animation-name: wing-shake;
+  animation-delay: 0.3s;
+}
+
+#bird-body,
+#upper-beak,
+#lower-beak,
+#first-wing,
+#second-wing,
+#third-wing {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes f-wing-shake {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(45px, 15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes body-grow {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(5px, 5px);
+  }
+  50% {
+    transform: translate(0px, 0px);
+  }
+  75% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes wing-shake {
+  0% {
+    transform: translate(5px, 5px);
+  }
+  50% {
+    transform: rotateZ(2deg) translate(50px, 20px);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes upper-beak-cherp {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, 20px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes lower-beak-cherp {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-10px, -30px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
